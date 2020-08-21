@@ -13,7 +13,7 @@ app.get("/", async (req, res) => {
   await loadtest.loadTest(options, function (error, result) {
     if (error) {
       return console.error(
-        "Got an error just to make sure everything is okay: %s",
+        "Got an error just to make sure everything is okay and this now: %s",
         error
       );
     }
