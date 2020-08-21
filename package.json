@@ -1,0 +1,20 @@
+{
+  "name": "simpleweb",
+  "version": "1.0.0",
+  "description": "Node app for docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start": "nodemon index.js",
+    "test": "node test.js"
+  },
+  "author": "stanley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "loadtest": "^5.0.4",
+    "nodemon": "^2.0.4"
+  }
+}
