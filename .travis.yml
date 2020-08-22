@@ -1,12 +1,8 @@
-language: ruby
-install:
-  - gem uninstall bundler
-  - gem install bundler --version '1.7.4'
-script: "rake"
 dist: xenial
 services:
   - docker
 before_install:
   - docker build -t stanleyeze/node-loadtest .
-# script:
-#   - docker run stanleyeze/node-loadtest npm start
+
+script:
+  - docker run stanleyeze/node-loadtest npm start
