@@ -1,3 +1,4 @@
+#travis file to build container and push to docker hub
 dist: xenial
 services:
   - docker
