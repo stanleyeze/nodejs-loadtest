@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
         error
       );
     }
-    console.log("Tests run successfully %s", result.statusCode);
+    console.log("Tests run successfully to see oo %s", result.statusCode);
   });
   res.send(obj);
 });
