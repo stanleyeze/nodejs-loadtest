@@ -5,6 +5,8 @@ const port = process.env.PORT || 5000;
 const loadtest = require("loadtest");
 const socketio = require("socket.io");
 const server = http.Server(app);
+
+//loadtes options
 const options = {
   url: "",
   maxRequests: 10,
@@ -24,7 +26,7 @@ app.get("/", (req, res) => {
     io.emit("hello", result);
     console.log("Tests run successfully %s", result.statusCode);
   });
-  res.status(200).send("Results below");
+  res.status(200).send({ name: "stanley" });
 });
 
 server.listen(port, () => {
