@@ -11,21 +11,30 @@ Nodejs Application for testing how a URL responds to multiple and concurrent req
 
 This project consists of a simple react frontend and a nodejs server.
 
-**Client**
+### Client
+
 The client server was built with reactjs.
 
-**Backend**
+### Backend
+
 Nodejs server.
 
-**loadtest**
+### loadtest
+
 npm library was uses to sending request and getting statistics of the requests (successful or faild)
 
-**Dockerfile**
+### Dockerfile
+
 I included Dockerfiles for building various images
 
-**NGINX**
+### NGINX
+
 Server for reverse proxy
 
-### Installion instruction
+### Running docker containers
 
-Included in this project is a travis.yml file for automating build of dockerfile and uploading to the server
+Pull the images from stanleyeze/loadtest-nginx, stanleyeze/loadtest-backend, stanleyeze/loadtest-client
+
+run **docker-compose up --build**
+
+Once the containers are running, access client server at / and port 3000, backend at /api at port 5000

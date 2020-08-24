@@ -1,9 +1,6 @@
 #base image
 From node:alpine AS LOAD_TESTER
 
-# Add contact
-LABEL maintainer="stanleyekene.ze@gmail.com"
-
 #set working dir
 WORKDIR /home/
 
