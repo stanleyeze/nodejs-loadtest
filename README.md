@@ -7,7 +7,7 @@ Nodejs Application for testing how a URL responds to multiple and concurrent req
 - Count and percentage of failed requests
 - Avg time of the success response
 
-## STRUCTURE
+## PIPELINE
 
 This project automated build and upload of three docker images to docker hub using TravisCI. To make this work, you need to create environmental variables "DOCKER_ID and "DOCKER_PASSWORD" from your Travis console
 
