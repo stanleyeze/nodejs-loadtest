@@ -21,12 +21,10 @@ app.get("/", (req, res) => {
   options.url = url;
   loadtest.loadTest(options, function (error, result) {
     if (error) {
-      io.emit("hello", error);
+      res.status(400).send({ message: "Bad Request" });
     }
-    io.emit("hello", result);
-    console.log("Tests run successfully %s", result.statusCode);
+    res.status(200).send({ name: "stanley" });
   });
-  res.status(200).send({ name: "stanley" });
 });
 
 server.listen(port, () => {

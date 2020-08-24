@@ -1,14 +1,25 @@
 import React, { Component } from "react";
 import socketio from "socket.io-client";
-const socket = socketio("http://192.168.99.100:3000/api/");
+const axios = require("axios");
+//const socket = socketio("http://192.168.99.100:3000/api/");
 
 class Home extends Component {
-  componentDidMount() {
-    socket.addEventListener("hello", (data) => {
-      this.setState({ data: data });
-    });
-  }
   state = { loading: false, data: {} };
+
+  async componentDidMount() {
+    const promise = await axios
+      .get("http://192.168.99.100:3000/api/?url=http://localhost:3001/")
+      .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+
+    console.log(promise);
+  }
   render() {
     console.log(this.state.data);
     return (
