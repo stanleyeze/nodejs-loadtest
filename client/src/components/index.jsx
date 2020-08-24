@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import socketio from "socket.io-client";
-const socket = socketio("http://192.168.99.100:3000/");
+const socket = socketio("http://192.168.99.100:3000/api/");
 
 class Home extends Component {
   componentDidMount() {

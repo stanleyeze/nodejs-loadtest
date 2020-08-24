@@ -3,11 +3,28 @@ dist: xenial
 services:
   - docker
 before_install:
-  - docker build -t stanleyeze/node-loadtest .
+  #builds a test image/container
+  #for running tests
+  #in this case, I didn't include test in my solution
+  #just for demonstration purpose
+  - docker build -t stanleyeze/client -f Dockerfile.dev
 
 script:
+  #overides the start commad so as to run test
+  #no test runs in this solution
   - docker run stanleyeze/node-loadtest npm run test -- --coverage
 
+  #after successful test, etc..
 after_success:
+  #builds images
+  - docker build -t stanleyeze/loadtest-client ./client
+  - docker build -t stanleyeze/loadtest-backend ./backend
+  - docker build -t stanleyeze/loadtest-nginx ./nginx
+
+  #login to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push stanleyeze/node-loadtest
+
+  #push images to docker hub
+  - docker push stanleyeze/loadtest-client
+  - docker push stanleyeze/loadtest-backend
+  - docker push stanleyeze/loadtest-nginx
