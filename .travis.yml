@@ -7,7 +7,7 @@ before_install:
   #for running tests
   #in this case, I didn't include test in my solution
   #just for demonstration purpose
-  - docker build -t stanleyeze/client -f Dockerfile.dev
+  - docker build -t stanleyeze/client -f .
 
 script:
   #overides the start commad so as to run test
