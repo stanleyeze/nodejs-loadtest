@@ -1,3 +1,3 @@
 # LOAD TESTING WITH NODEJS
 
-### Fire a request
+#### Nodejs Application for testing how a URL responds to multiple and concurrent requests within a short period of time

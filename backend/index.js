@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const http = require("http");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const loadtest = require("loadtest");
 const socketio = require("socket.io");
 const server = http.Server(app);

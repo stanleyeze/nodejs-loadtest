@@ -1,5 +1,5 @@
 #base image
-From node:alpine AS LOAD_TESTER
+From node:alpine
 
 # Add contact
 LABEL maintainer="stanleyekene.ze@gmail.com"
@@ -13,7 +13,8 @@ COPY package.json .
 #install dependencies
 RUN npm install
 
-#copy other files to home directory
+#copies remaining files
 COPY . .
 
+#entry command
 CMD ["node", "index.js"]
