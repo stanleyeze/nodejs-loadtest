@@ -9,15 +9,19 @@ Nodejs Application for testing how a URL responds to multiple and concurrent req
 
 ## STRUCTURE
 
+This project automated build and upload of three docker images to docker hub using TravisCI. To make this work, you need to create environmental variables "DOCKER_ID and "DOCKER_PASSWORD" from your Travis console
+
+## STRUCTURE
+
 This project consists of a simple react frontend and a nodejs server.
 
 ### Client
 
-The client server was built with reactjs.
+The client server was built with reactjs runing at port 3000.
 
 ### Backend
 
-Nodejs server.
+Nodejs server running at port 5000.
 
 ### loadtest
 
