@@ -97,7 +97,7 @@ class Home extends Component {
                         className="waves-effect waves-light btn"
                         type="submit"
                       >
-                        <i className="material-icons right">cloud</i>button
+                        <i className="material-icons right">SEARCH</i>GO
                       </button>
                     </div>
                   )}
